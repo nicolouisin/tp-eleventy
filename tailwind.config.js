@@ -18,7 +18,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      'sans': ['Helvetica', 'Arial', 'sans-serif'],
+      'ma-police': ['yeseva one', 'sans-serif'],
     },
     container: {
       center: true,
