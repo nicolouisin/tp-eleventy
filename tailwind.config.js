@@ -13,6 +13,12 @@ module.exports = {
           },
         },
       }),
+    colors: {
+      'ma-color': '#5F69B1',
+      },
+    },
+    fontFamily: {
+      'sans': ['Helvetica', 'Arial', 'sans-serif'],
     },
     container: {
       center: true,
