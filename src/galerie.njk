@@ -2,7 +2,6 @@
 layout: base.njk
 title: Galerie
 ---
-
 <div x-data="{open: false}">
     <button @click="open = !open">
         Affiche/Cache dialogue
@@ -10,4 +9,29 @@ title: Galerie
     <dialog :open="open">
         Contenu dialogue
     </dialog>
+</div>
+<div x-data="{imageUrl:null}">
+    <ul>
+        <li><img src="/static/images/animals-1.jpeg" alt="un animal"
+                 @click="imageUrl ='static/images/animal-1.jpeg';"></li>
+        <li><img src="/static/images/animals-2.jpeg" alt="un animal"
+                 @click="imageUrl ='static/images/animal-2.jpeg';"></li>
+        <li><img src="/static/images/animals-3.jpeg" alt="un animal"
+                 @click="imageUrl ='static/images/animal-3.jpeg';"></li>
+        <li><img src="/static/images/animals-4.jpeg" alt="un animal"
+                 @click="imageUrl ='static/images/animal-4.jpeg';"></li>
+        <li><img src="/static/images/animals-5.jpeg" alt="un animal"
+                 @click="imageUrl ='static/images/animal-5.jpeg';"></li>
+        <li><img src="/static/images/animals-6.jpeg" alt="un animal"
+                 @click="imageUrl ='static/images/animal-6.jpeg';"></li>
+        <li><img src="/static/images/animals-7.jpeg" alt="un animal"
+                 @click="imageUrl ='static/images/animal-7.jpeg';"></li>
+        <li><img src="/static/images/animals-8.jpeg" alt="un animal"
+                 @click="imageUrl ='static/images/animal-8.jpeg';"></li>
+        <li><img src="/static/images/animals-9.jpeg" alt="un animal"
+                 @click="imageUrl ='static/images/animal-9.jpeg';"></li>
+    </ul>
+    <div x-show="!!imageUrl" @click.away="imageUrl=null">
+        <img :src="imageUrl" alt="">
+    </div>
 </div>
